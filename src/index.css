@@ -6,47 +6,47 @@
 
 @layer base {
   :root {
-    /* Paleta Jurídica Profissional */
-    --background: 220 20% 97%;
-    --foreground: 220 30% 15%;
+    /* Paleta Jurídica Profissional - Tons Terrosos */
+    --background: 30 15% 96%;
+    --foreground: 20 18% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 20 18% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 20 18% 13%;
 
-    /* Azul Escuro Profissional */
-    --primary: 220 60% 20%;
-    --primary-foreground: 45 80% 95%;
+    /* Marrom Escuro Profissional */
+    --primary: 20 18% 13%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Dourado Elegante */
-    --secondary: 45 70% 50%;
-    --secondary-foreground: 220 60% 15%;
+    /* Bege/Taupe Elegante */
+    --secondary: 24 18% 67%;
+    --secondary-foreground: 20 18% 13%;
 
-    --muted: 220 15% 92%;
-    --muted-foreground: 220 15% 45%;
+    --muted: 30 10% 90%;
+    --muted-foreground: 20 10% 45%;
 
-    /* Âmbar Accent */
-    --accent: 38 90% 55%;
-    --accent-foreground: 220 60% 15%;
+    /* Bege Accent */
+    --accent: 24 18% 67%;
+    --accent-foreground: 20 18% 13%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 45 70% 50%;
+    --border: 30 15% 85%;
+    --input: 30 15% 85%;
+    --ring: 24 18% 67%;
 
     --radius: 0.75rem;
 
     /* Custom Design Tokens */
-    --gold-gradient: linear-gradient(135deg, hsl(45, 70%, 50%) 0%, hsl(38, 90%, 55%) 50%, hsl(45, 80%, 60%) 100%);
-    --hero-gradient: linear-gradient(180deg, hsl(220, 60%, 15%) 0%, hsl(220, 50%, 25%) 100%);
-    --card-shadow: 0 4px 20px -4px hsl(220 30% 15% / 0.12);
-    --card-shadow-hover: 0 8px 30px -4px hsl(220 30% 15% / 0.18);
-    --gold-glow: 0 0 30px hsl(45 70% 50% / 0.3);
-    --text-shadow: 0 2px 4px hsl(220 30% 15% / 0.3);
+    --taupe-gradient: linear-gradient(135deg, hsl(24, 18%, 67%) 0%, hsl(20, 20%, 60%) 50%, hsl(24, 22%, 72%) 100%);
+    --hero-gradient: linear-gradient(180deg, hsl(20, 18%, 13%) 0%, hsl(20, 15%, 20%) 100%);
+    --card-shadow: 0 4px 20px -4px hsl(20 18% 13% / 0.12);
+    --card-shadow-hover: 0 8px 30px -4px hsl(20 18% 13% / 0.18);
+    --taupe-glow: 0 0 30px hsl(24 18% 67% / 0.4);
+    --text-shadow: 0 2px 4px hsl(20 18% 13% / 0.3);
 
     /* Typography */
     --font-display: 'Playfair Display', Georgia, serif;
@@ -58,35 +58,35 @@
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-border: 30 13% 91%;
+    --sidebar-ring: 24 18% 67%;
   }
 
   .dark {
-    --background: 220 30% 8%;
-    --foreground: 45 20% 95%;
+    --background: 20 26% 4%;
+    --foreground: 45 8% 90%;
 
-    --card: 220 30% 12%;
-    --card-foreground: 45 20% 95%;
+    --card: 20 20% 10%;
+    --card-foreground: 45 8% 90%;
 
-    --popover: 220 30% 12%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 20 20% 10%;
+    --popover-foreground: 45 8% 90%;
 
-    --primary: 45 70% 55%;
-    --primary-foreground: 220 60% 10%;
+    --primary: 24 18% 67%;
+    --primary-foreground: 20 18% 10%;
 
-    --secondary: 220 50% 25%;
-    --secondary-foreground: 45 80% 95%;
+    --secondary: 20 15% 20%;
+    --secondary-foreground: 45 8% 90%;
 
-    --muted: 220 25% 18%;
-    --muted-foreground: 220 15% 65%;
+    --muted: 20 15% 15%;
+    --muted-foreground: 30 10% 60%;
 
-    --accent: 38 90% 55%;
-    --accent-foreground: 220 60% 10%;
+    --accent: 24 18% 67%;
+    --accent-foreground: 20 18% 10%;
 
-    --border: 220 25% 20%;
-    --input: 220 25% 20%;
-    --ring: 45 70% 55%;
+    --border: 20 15% 18%;
+    --input: 20 15% 18%;
+    --ring: 24 18% 67%;
   }
 }
 
@@ -106,8 +106,8 @@
 }
 
 @layer components {
-  .gold-gradient-text {
-    background: var(--gold-gradient);
+  .taupe-gradient-text {
+    background: var(--taupe-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -127,8 +127,8 @@
     transform: translateY(-2px);
   }
 
-  .gold-glow {
-    box-shadow: var(--gold-glow);
+  .taupe-glow {
+    box-shadow: var(--taupe-glow);
   }
 
   .text-shadow {
@@ -186,10 +186,10 @@
 @keyframes pulseSoft {
   0%, 100% {
     transform: scale(1);
-    box-shadow: var(--gold-glow);
+    box-shadow: var(--taupe-glow);
   }
   50% {
     transform: scale(1.02);
-    box-shadow: 0 0 40px hsl(45 70% 50% / 0.5);
+    box-shadow: 0 0 40px hsl(24 18% 67% / 0.5);
   }
 }

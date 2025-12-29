@@ -36,7 +36,7 @@ const ThankYou = () => {
                       key={i}
                       className="absolute w-3 h-3 rounded-full"
                       style={{
-                        backgroundColor: i % 2 === 0 ? "hsl(45, 70%, 50%)" : "hsl(220, 60%, 20%)",
+                        backgroundColor: i % 2 === 0 ? "hsl(24, 18%, 67%)" : "hsl(20, 18%, 13%)",
                         animation: `confetti 1s ease-out forwards`,
                         animationDelay: `${i * 0.1}s`,
                         transform: `rotate(${i * 30}deg) translateY(-60px)`,
@@ -67,7 +67,7 @@ const ThankYou = () => {
               style={{ animationDelay: "0.3s" }}
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <div className="p-3 rounded-xl bg-gold-gradient">
+                <div className="p-3 rounded-xl bg-taupe-gradient">
                   <FileText className="w-8 h-8 text-primary" />
                 </div>
               </div>

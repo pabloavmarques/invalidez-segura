@@ -28,7 +28,7 @@ const DiseasesSection = () => {
 
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Doenças que podem garantir o{" "}
-              <span className="gold-gradient-text">benefício</span>
+              <span className="taupe-gradient-text">benefício</span>
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-body">

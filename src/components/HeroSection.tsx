@@ -26,7 +26,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.1s" }}
           >
             Você sente{" "}
-            <span className="gold-gradient-text">dores nas costas</span>{" "}
+            <span className="taupe-gradient-text">dores nas costas</span>{" "}
             ao trabalhar?
           </h1>
 
