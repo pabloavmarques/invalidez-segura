@@ -32,7 +32,7 @@ const BenefitsSection = () => {
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Por que baixar nossa{" "}
-              <span className="gold-gradient-text">Cartilha Gratuita</span>?
+              <span className="taupe-gradient-text">Cartilha Gratuita</span>?
             </h2>
 
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-body">
@@ -49,7 +49,7 @@ const BenefitsSection = () => {
                 className="flex gap-4 p-6 bg-card rounded-2xl border border-border card-professional animate-slide-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gold-gradient flex items-center justify-center shadow-lg">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-taupe-gradient flex items-center justify-center shadow-lg">
                   <benefit.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>

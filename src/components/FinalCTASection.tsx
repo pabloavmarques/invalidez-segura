@@ -22,7 +22,7 @@ const FinalCTASection = () => {
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6 text-shadow">
             Descubra se você tem direito à{" "}
-            <span className="gold-gradient-text">Aposentadoria por Invalidez</span>
+            <span className="taupe-gradient-text">Aposentadoria por Invalidez</span>
           </h2>
 
           <p className="text-lg md:text-xl text-primary-foreground/80 mb-8 font-body max-w-2xl mx-auto">

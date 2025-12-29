@@ -51,15 +51,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        gold: {
-          DEFAULT: "hsl(45, 70%, 50%)",
-          light: "hsl(45, 80%, 60%)",
-          dark: "hsl(38, 90%, 45%)",
+        taupe: {
+          DEFAULT: "hsl(24, 18%, 67%)",
+          light: "hsl(24, 22%, 72%)",
+          dark: "hsl(20, 20%, 60%)",
         },
-        navy: {
-          DEFAULT: "hsl(220, 60%, 20%)",
-          light: "hsl(220, 50%, 30%)",
-          dark: "hsl(220, 60%, 15%)",
+        brown: {
+          DEFAULT: "hsl(20, 18%, 13%)",
+          light: "hsl(20, 15%, 20%)",
+          dark: "hsl(20, 26%, 4%)",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -102,9 +102,9 @@ export default {
         "shimmer": "shimmer 2s linear infinite",
       },
       backgroundImage: {
-        "gold-gradient": "linear-gradient(135deg, hsl(45, 70%, 50%) 0%, hsl(38, 90%, 55%) 50%, hsl(45, 80%, 60%) 100%)",
-        "hero-gradient": "linear-gradient(180deg, hsl(220, 60%, 15%) 0%, hsl(220, 50%, 25%) 100%)",
-        "shimmer-gradient": "linear-gradient(90deg, transparent 0%, hsl(45, 70%, 50% / 0.3) 50%, transparent 100%)",
+        "taupe-gradient": "linear-gradient(135deg, hsl(24, 18%, 67%) 0%, hsl(20, 20%, 60%) 50%, hsl(24, 22%, 72%) 100%)",
+        "hero-gradient": "linear-gradient(180deg, hsl(20, 18%, 13%) 0%, hsl(20, 15%, 20%) 100%)",
+        "shimmer-gradient": "linear-gradient(90deg, transparent 0%, hsl(24, 18%, 67% / 0.3) 50%, transparent 100%)",
       },
     },
   },
