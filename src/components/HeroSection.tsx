@@ -48,10 +48,26 @@ const HeroSection = () => {
             </span>
           </p>
 
+          {/* VSL Video - Mobile optimized (9:16 aspect ratio) */}
+          <div 
+            className="animate-scale-in mb-12 max-w-sm mx-auto"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <div className="relative w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-2 border-secondary/30">
+              <iframe
+                src="https://www.youtube.com/embed/_SJV0XvlVhE"
+                title="Vídeo sobre Aposentadoria por Invalidez"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
           {/* Description */}
           <p 
             className="text-base md:text-lg text-primary-foreground/70 mb-12 max-w-3xl mx-auto animate-slide-up font-body leading-relaxed"
-            style={{ animationDelay: "0.4s" }}
+            style={{ animationDelay: "0.5s" }}
           >
             Esse benefício é destinado a pessoas que ficaram incapacitadas de forma 
             total e permanente para o trabalho — e que, muitas vezes, 
@@ -61,7 +77,7 @@ const HeroSection = () => {
           {/* Lead Capture Form */}
           <div 
             className="animate-scale-in"
-            style={{ animationDelay: "0.5s" }}
+            style={{ animationDelay: "0.6s" }}
           >
             <LeadCaptureForm />
           </div>
@@ -69,7 +85,7 @@ const HeroSection = () => {
           {/* Scroll Indicator */}
           <div 
             className="mt-16 animate-float"
-            style={{ animationDelay: "0.6s" }}
+            style={{ animationDelay: "0.7s" }}
           >
             <ArrowDown className="w-6 h-6 text-secondary/60 mx-auto" />
           </div>
