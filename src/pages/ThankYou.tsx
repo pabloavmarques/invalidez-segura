@@ -62,7 +62,7 @@ const ThankYou = () => {
             </h2>
 
             <p className="text-lg text-muted-foreground mb-8 font-body animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              Clique no botão abaixo para baixar sua{" "}
+              Toque no botão abaixo para baixar sua{" "}
               <strong className="text-foreground">Cartilha Informativa sobre Aposentadoria por Invalidez</strong>
             </p>
 
