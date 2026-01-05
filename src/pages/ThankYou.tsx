@@ -9,18 +9,23 @@ const ThankYou = () => {
   const [showConfetti, setShowConfetti] = useState(true);
 
   useEffect(() => {
+    // Dispara evento personalizado ao carregar a página de obrigado
+    if (window.fbq) {
+      window.fbq('trackCustom', 'View Page Cartilha');
+    }
+
     // Desativa confetti após 3 segundos
     const timer = setTimeout(() => setShowConfetti(false), 3000);
     return () => clearTimeout(timer);
   }, []);
 
   // URL do PDF - deve ser substituída pelo link real
-  const pdfUrl = "#"; // Substituir pelo link real do PDF
+  const pdfUrl = "https://drive.google.com/file/d/1gkLALMCTDOrZ1WqXCl83BlZrRcUOVNUY/view?usp=sharing";
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      
+
       <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
@@ -62,7 +67,7 @@ const ThankYou = () => {
             </p>
 
             {/* Download Card */}
-            <div 
+            <div
               className="bg-card border border-border rounded-2xl p-8 card-professional mb-8 animate-scale-in"
               style={{ animationDelay: "0.3s" }}
             >
@@ -94,19 +99,19 @@ const ThankYou = () => {
             </div>
 
             {/* Additional Info */}
-            <div 
+            <div
               className="bg-muted/50 rounded-xl p-6 mb-8 animate-slide-up"
               style={{ animationDelay: "0.4s" }}
             >
               <p className="text-muted-foreground font-body text-sm">
-                <strong className="text-foreground">Dica:</strong> Leia a cartilha com atenção e, 
-                se você se identificar com alguma das situações descritas, entre em contato conosco 
+                <strong className="text-foreground">Dica:</strong> Leia a cartilha com atenção e,
+                se você se identificar com alguma das situações descritas, entre em contato conosco
                 para uma análise personalizada do seu caso.
               </p>
             </div>
 
             {/* Back Link */}
-            <Link 
+            <Link
               to="/"
               className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 transition-colors font-medium font-body"
             >

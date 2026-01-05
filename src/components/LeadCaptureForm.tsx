@@ -14,7 +14,7 @@ const LeadCaptureForm = () => {
   const formatWhatsapp = (value: string) => {
     // Remove tudo que não é número
     const numbers = value.replace(/\D/g, "");
-    
+
     // Formata como (XX) XXXXX-XXXX
     if (numbers.length <= 2) {
       return numbers;
@@ -38,7 +38,7 @@ const LeadCaptureForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateWhatsapp(whatsapp)) {
       toast({
         title: "Número inválido",
@@ -51,10 +51,29 @@ const LeadCaptureForm = () => {
     setIsLoading(true);
 
     try {
-      // Simula envio (será substituído pela integração real)
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Salva no localStorage temporariamente
+      // URL do Webhook (Google Apps Script)
+      const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbxlpzTVfddaqDyez98SJ7V1Av5J8Bd8RMwb3cQzeUc2EOFOl3hAmzAgk6cPpo1Ftnhj/exec";
+
+      if (!WEBHOOK_URL) {
+        console.warn("URL do Webhook não configurada!");
+        // Simula delay se não tiver webhook configurado para não quebrar a UX
+        await new Promise(resolve => setTimeout(resolve, 1500));
+      } else {
+        // Usando FormData nativo para compatibilidade com Google Apps Script
+        const formData = new FormData();
+        formData.append('whatsapp', whatsapp.replace(/\D/g, ""));
+        formData.append('date', new Date().toISOString());
+        formData.append('url', window.location.href);
+        formData.append('userAgent', navigator.userAgent);
+
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          body: formData
+        });
+      }
+
+      // Salva no localStorage como backup
       const leads = JSON.parse(localStorage.getItem("leads") || "[]");
       leads.push({
         whatsapp: whatsapp.replace(/\D/g, ""),
@@ -73,6 +92,7 @@ const LeadCaptureForm = () => {
       }, 1000);
 
     } catch (error) {
+      console.error("Erro ao enviar lead:", error);
       toast({
         title: "Erro ao enviar",
         description: "Tente novamente em alguns instantes.",
@@ -97,7 +117,7 @@ const LeadCaptureForm = () => {
         <h3 className="font-display text-xl md:text-2xl font-bold text-primary-foreground mb-2 text-center">
           Receba sua Cartilha Agora
         </h3>
-        
+
         <p className="text-primary-foreground/70 text-sm mb-6 text-center font-body">
           Digite seu WhatsApp e receba gratuitamente a Cartilha Informativa sobre Aposentadoria por Invalidez
         </p>
